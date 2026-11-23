@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Svøm! – live-tider og statistikk fra svømmestevnene</title>
+    <meta
+      name="description"
+      content="Live-tider, heat, resultater og statistikk fra svømmestevnene – i én rask app for svømmere, foreldre og trenere."
+    />
+    <meta name="theme-color" content="#070e1d" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f4f7fb" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="apple-touch-icon" href="/icon.png" />
+    <link rel="canonical" href="https://rubjo.github.io/svom/" />
+    <meta property="og:title" content="Svøm!" />
+    <meta property="og:url" content="https://rubjo.github.io/svom/" />
+    <!-- Link previews need a full URL, not a path. -->
+    <meta property="og:image" content="https://rubjo.github.io/svom/shots/event-live-hero-dark.png" />
+    <!-- Set the theme before first paint, so a dark-mode visitor never sees a
+         white flash. Same storage key as Nuxt UI's colour mode (VueUse useDark). -->
+    <script>
+      ;(function () {
+        var s = localStorage.getItem('vueuse-color-scheme') || 'auto'
+        var dark = s === 'dark' || (s === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.classList.toggle('dark', dark)
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="app" class="isolate"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

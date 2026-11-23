@@ -1,0 +1,206 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+/* Victor Mono for race times, as in the app (svom/src/style/main.css). */
+@font-face {
+  font-family: 'Svom Time';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  size-adjust: 90%;
+  src: url('../assets/fonts/VictorMono-VariableFont_wght.ttf') format('truetype');
+}
+
+/* ============================================================================
+   "Night pool" — the app's tokens, copied from svom/src/style/main.css so the
+   page and the app share one palette. Change them there first, then here.
+   ============================================================================ */
+@theme static {
+  --radius-xl: 0.5625rem;
+  --radius-2xl: 0.75rem;
+  --radius-3xl: 1.125rem;
+
+  --color-lane-50: #ebfaff;
+  --color-lane-100: #cff2fd;
+  --color-lane-200: #a3e5fa;
+  --color-lane-300: #66d2f4;
+  --color-lane-400: #26b9e8;
+  --color-lane-500: #0aa0d6;
+  --color-lane-600: #0882b6;
+  --color-lane-700: #0b6894;
+  --color-lane-800: #105679;
+  --color-lane-900: #134866;
+  --color-lane-950: #0a2e44;
+
+  --color-abyss-50: #f4f7fb;
+  --color-abyss-100: #e6ecf5;
+  --color-abyss-200: #c9d5e6;
+  --color-abyss-300: #9fb2cf;
+  --color-abyss-400: #7089b0;
+  --color-abyss-500: #506b94;
+  --color-abyss-600: #3d5479;
+  --color-abyss-700: #2f4263;
+  --color-abyss-800: #1d2b45;
+  --color-abyss-900: #111c31;
+  --color-abyss-950: #070e1d;
+
+  --color-gold: #e9b949;
+  --color-silver: #b6c0cc;
+  --color-bronze: #cd8b53;
+
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+  --font-display:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  --font-time: 'Svom Time', ui-monospace, 'SF Mono', monospace;
+
+  --animate-live-dot: live-dot 1.6s ease-in-out infinite;
+  --animate-rise: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-float: float 7s ease-in-out infinite;
+
+  @keyframes live-dot {
+    50% {
+      opacity: 0.35;
+      transform: scale(0.8);
+    }
+  }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+  }
+  @keyframes float {
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+:root {
+  color-scheme: light;
+  --ui-primary: var(--ui-color-primary-600);
+
+  --ui-bg: var(--color-abyss-50);
+  --ui-bg-elevated: #ffffff;
+  --ui-bg-muted: color-mix(in oklab, var(--color-abyss-100) 70%, #ffffff);
+  --ui-bg-accented: var(--color-abyss-100);
+  --ui-border: color-mix(in oklab, var(--color-abyss-900) 10%, transparent);
+  --ui-border-muted: color-mix(in oklab, var(--color-abyss-900) 6%, transparent);
+  --ui-border-accented: color-mix(in oklab, var(--color-abyss-900) 16%, transparent);
+
+  --shell-glow: color-mix(in oklab, var(--color-lane-400) 22%, transparent);
+  --shell-top: var(--color-lane-50);
+  --shell-bottom: var(--color-abyss-50);
+  --glass-bg: color-mix(in oklab, #ffffff 62%, transparent);
+  --card-shadow: 0 1px 2px rgb(17 28 49 / 0.04), 0 10px 30px -14px rgb(17 28 49 / 0.18);
+  /* The phone's drop shadow. */
+  --phone-shadow: 0 40px 80px -30px rgb(11 104 148 / 0.45), 0 18px 36px -18px rgb(17 28 49 / 0.3);
+}
+
+:root.dark {
+  color-scheme: dark;
+  --ui-primary: var(--ui-color-primary-500);
+
+  --ui-bg: var(--color-abyss-950);
+  --ui-bg-elevated: color-mix(in oklab, var(--color-abyss-900) 82%, var(--color-lane-950));
+  --ui-bg-muted: color-mix(in oklab, var(--color-abyss-800) 62%, var(--color-lane-950));
+  --ui-bg-accented: var(--color-abyss-800);
+  --ui-border: color-mix(in oklab, #ffffff 8%, transparent);
+  --ui-border-muted: color-mix(in oklab, #ffffff 5%, transparent);
+  --ui-border-accented: color-mix(in oklab, #ffffff 13%, transparent);
+
+  --shell-glow: color-mix(in oklab, var(--color-lane-500) 26%, transparent);
+  --shell-top: color-mix(in oklab, var(--color-lane-950) 70%, var(--color-abyss-900));
+  --shell-bottom: var(--color-abyss-950);
+  --glass-bg: color-mix(in oklab, var(--color-abyss-900) 58%, transparent);
+  --card-shadow: inset 0 1px 0 rgb(255 255 255 / 0.05), 0 12px 32px -20px rgb(0 0 0 / 0.7);
+  --phone-shadow: 0 50px 100px -30px rgb(10 160 214 / 0.35), 0 20px 40px -20px rgb(0 0 0 / 0.8);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  background: var(--ui-bg);
+  -webkit-font-smoothing: antialiased;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── Utilities ──────────────────────────────────────────────────────────── */
+
+@utility glass {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+}
+
+/* The app's loud surface (HeroCard): lit water, top-right glow. */
+@utility bg-hero {
+  background-image:
+    radial-gradient(
+      120% 90% at 100% 0%,
+      color-mix(in oklab, var(--color-lane-300) 45%, transparent) 0%,
+      transparent 55%
+    ),
+    linear-gradient(135deg, var(--color-lane-500) 0%, var(--color-lane-800) 100%);
+}
+
+/* The page's water: the app shell's dusk glow over the abyss. */
+@utility bg-shell {
+  background-image:
+    radial-gradient(70% 50% at 50% 0%, var(--shell-glow) 0%, transparent 70%),
+    linear-gradient(180deg, var(--shell-top) 0%, var(--shell-bottom) 60rem);
+}
+
+/* A lane rope: floats in the app's turquoise, red near the walls. */
+@utility lane-rope {
+  height: 0.625rem;
+  border-radius: 9999px;
+  background-image:
+    radial-gradient(circle at 50% 35%, rgb(255 255 255 / 0.55), transparent 45%),
+    repeating-linear-gradient(
+      90deg,
+      var(--color-lane-500) 0 1.1rem,
+      var(--color-lane-300) 1.1rem 1.35rem,
+      #ffffff 1.35rem 2.45rem,
+      var(--color-lane-300) 2.45rem 2.7rem
+    );
+  background-size:
+    1.35rem 100%,
+    auto;
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+@utility text-shine {
+  background-image: linear-gradient(100deg, var(--color-lane-300), var(--color-lane-500) 45%, var(--color-lane-700));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+:root:not(.dark) .text-shine {
+  background-image: linear-gradient(100deg, var(--color-lane-500), var(--color-lane-700) 55%, var(--color-abyss-800));
+}
+
+/* Scroll reveal (see useReveal): hidden until it enters the viewport. */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
