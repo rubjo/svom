@@ -67,7 +67,7 @@ void main() {
 /** Tint and strength per theme: lane-300 on the night pool, lane-600 by day. */
 const LOOK = {
   dark: { tint: [0.4, 0.824, 0.957], alpha: 0.065 },
-  light: { tint: [0.031, 0.51, 0.714], alpha: 0.1 },
+  light: { tint: [0.031, 0.51, 0.714], alpha: 0.15 },
 }
 
 const CELL_PX = 8 // ripple grid resolution, CSS px per cell

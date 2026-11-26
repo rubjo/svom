@@ -81,17 +81,18 @@
   color-scheme: light;
   --ui-primary: var(--ui-color-primary-600);
 
-  --ui-bg: var(--color-abyss-50);
+  /* A step darker than the app's abyss-50, so the water reads through. */
+  --ui-bg: var(--color-abyss-100);
   --ui-bg-elevated: #ffffff;
-  --ui-bg-muted: color-mix(in oklab, var(--color-abyss-100) 70%, #ffffff);
-  --ui-bg-accented: var(--color-abyss-100);
+  --ui-bg-muted: color-mix(in oklab, var(--color-abyss-200) 55%, var(--color-abyss-100));
+  --ui-bg-accented: var(--color-abyss-200);
   --ui-border: color-mix(in oklab, var(--color-abyss-900) 10%, transparent);
   --ui-border-muted: color-mix(in oklab, var(--color-abyss-900) 6%, transparent);
   --ui-border-accented: color-mix(in oklab, var(--color-abyss-900) 16%, transparent);
 
-  --shell-glow: color-mix(in oklab, var(--color-lane-400) 22%, transparent);
-  --shell-top: var(--color-lane-50);
-  --shell-bottom: var(--color-abyss-50);
+  --shell-glow: color-mix(in oklab, var(--color-lane-400) 30%, transparent);
+  --shell-top: var(--color-lane-100);
+  --shell-bottom: var(--color-abyss-100);
   --glass-bg: color-mix(in oklab, #ffffff 62%, transparent);
   --card-shadow: 0 1px 2px rgb(17 28 49 / 0.04), 0 10px 30px -14px rgb(17 28 49 / 0.18);
   /* The phone's drop shadow. */

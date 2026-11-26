@@ -71,12 +71,12 @@
             target="_blank"
             size="xl"
             block
-            :label="plan.trial ? t.pricing.cta : t.pricing.ctaSingle"
+            :label="t.pricing.cta"
             class="mt-auto justify-center"
             :class="plan.featured ? 'bg-white text-lane-800 hover:bg-white/90 active:bg-white/90' : ''"
           />
           <p class="mt-3 text-center text-xs" :class="plan.featured ? 'text-white/75' : 'text-muted'">
-            {{ plan.trial ? t.pricing.trial : t.pricing.noTrial }}
+            {{ t.pricing.trial }}
           </p>
         </article>
       </div>
@@ -123,7 +123,6 @@ const plans = computed(() => [
     price: nok.value.format(PRICES_NOK.single[period.value]),
     saving: saving(PRICES_NOK.single),
     featured: false,
-    trial: false,
   },
   {
     key: 'family',
@@ -133,9 +132,6 @@ const plans = computed(() => [
     price: nok.value.format(PRICES_NOK.family[period.value]),
     saving: saving(PRICES_NOK.family),
     featured: true,
-    // The 1-month free intro offer exists on the family plans only
-    // (App Store Connect); the individual plans have none.
-    trial: true,
   },
 ])
 </script>

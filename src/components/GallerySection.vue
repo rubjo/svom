@@ -18,15 +18,8 @@
       ref="track"
       class="mt-14 flex snap-x snap-mandatory gap-8 overflow-x-auto px-[max(1.25rem,calc((100vw-72rem)/2+1.25rem))] pb-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
     >
-      <li v-for="(shot, i) in shots" :key="shot" class="w-[min(18rem,72vw)] shrink-0 snap-center sm:snap-start">
-        <button
-          type="button"
-          class="block w-full cursor-zoom-in rounded-[2.6rem] transition duration-300 hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
-          :aria-label="t.gallery.captions[shot]"
-          @click="openAt(i)"
-        >
-          <PhoneFrame :shot="shot" :alt="t.gallery.captions[shot]" />
-        </button>
+      <li v-for="shot in shots" :key="shot" class="w-[min(14.4rem,57.6vw)] shrink-0 snap-center sm:snap-start">
+        <PhoneFrame :shot="shot" :alt="t.gallery.captions[shot]" />
         <p class="mt-5 text-center text-sm font-medium text-toned">{{ t.gallery.captions[shot] }}</p>
       </li>
     </ul>
@@ -36,7 +29,6 @@
 <script setup>
 import { ref } from 'vue'
 import { useI18n } from '../composables/useI18n'
-import { useLightbox } from '../composables/useLightbox'
 import PhoneFrame from './PhoneFrame.vue'
 
 const { t } = useI18n()
@@ -59,13 +51,5 @@ function scroll(dir) {
   const el = track.value
   if (!el) return
   el.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: 'smooth' })
-}
-
-const lightbox = useLightbox()
-function openAt(i) {
-  lightbox.show(
-    shots.map((shot) => ({ shot, caption: t.value.gallery.captions[shot] })),
-    i,
-  )
 }
 </script>

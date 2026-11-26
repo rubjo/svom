@@ -16,21 +16,14 @@
           :key="row.kicker"
           class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20"
         >
-          <div v-reveal class="relative mx-auto w-[min(17rem,70vw)] lg:w-[19rem]" :class="i % 2 ? 'lg:order-2' : ''">
+          <div v-reveal class="relative mx-auto w-[min(13.6rem,56vw)] lg:w-[15.2rem]" :class="i % 2 ? 'lg:order-2' : ''">
             <span
               class="pointer-events-none absolute -top-14 font-time text-[11rem] leading-none font-bold text-primary/10 select-none"
               :class="i % 2 ? '-right-24' : '-left-24'"
               aria-hidden="true"
               >{{ i + 1 }}</span
             >
-            <button
-              type="button"
-              class="relative block w-full cursor-zoom-in rounded-[2.6rem] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
-              :aria-label="row.title"
-              @click="openAt(i)"
-            >
-              <PhoneFrame :shot="shots[i]" :alt="row.title" />
-            </button>
+            <PhoneFrame :shot="shots[i]" :alt="row.title" />
           </div>
 
           <div v-reveal="120" class="max-w-xl">
@@ -79,19 +72,10 @@
 
 <script setup>
 import { useI18n } from '../composables/useI18n'
-import { useLightbox } from '../composables/useLightbox'
 import PhoneFrame from './PhoneFrame.vue'
 
 const { t } = useI18n()
 
 /** Screenshot per feature row, in the order of t.features.rows. */
 const shots = ['event-live', 'swimmer-splitdev', 'medal-hero']
-
-const lightbox = useLightbox()
-function openAt(i) {
-  lightbox.show(
-    shots.map((shot, j) => ({ shot, caption: t.value.features.rows[j].title })),
-    i,
-  )
-}
 </script>

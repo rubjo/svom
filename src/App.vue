@@ -13,7 +13,6 @@
         <FaqSection />
       </main>
       <SiteFooter />
-      <ScreenshotLightbox />
     </div>
   </UApp>
 </template>
@@ -28,7 +27,6 @@ import PricingSection from './components/PricingSection.vue'
 import FaqSection from './components/FaqSection.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import WaterBackground from './components/WaterBackground.vue'
-import ScreenshotLightbox from './components/ScreenshotLightbox.vue'
 
 const { uiLocale } = useI18n()
 </script>

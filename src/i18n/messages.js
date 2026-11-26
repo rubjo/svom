@@ -12,14 +12,13 @@ export const messages = {
     },
     nav: { features: 'Funksjoner', gallery: 'Skjermbilder', pricing: 'Priser', faq: 'Spørsmål' },
     language: 'Språk',
-    lightbox: { prev: 'Forrige', next: 'Neste', close: 'Lukk' },
     appStore: { small: 'Last ned i', big: 'App Store' },
     hero: {
       eyebrow: 'Live fra bassengkanten',
       title1: 'Hvert løp.',
       title2: 'Hvert sekund.',
       lead: 'Svøm! samler live-tider, heat, resultater og statistikk fra svømmestevnene – i én rask app for svømmere, foreldre og trenere.',
-      trial: 'Familie: første måned gratis',
+      trial: 'Første måned gratis',
       platforms: 'For iPhone og iPad',
     },
     heroCard: { event: 'Øvelse 7. 100m fri, herrer', heat: 'Heat 1 / 2', pr: 'Ny PR', restart: 'Start løpet på nytt' },
@@ -109,9 +108,7 @@ export const messages = {
         'Varsler før start og når resultatene er klare',
       ],
       cta: 'Start gratis prøveperiode',
-      ctaSingle: 'Abonner',
       trial: 'Første måned gratis for nye abonnenter',
-      noTrial: 'Si opp når som helst i App Store',
       note: 'Priser i norske kroner – App Store viser prisen i din valuta. Abonnementet fornyes automatisk og kan sies opp når som helst i App Store.',
     },
     faq: {
@@ -136,7 +133,7 @@ export const messages = {
         {
           label: 'Kan jeg prøve før jeg betaler?',
           content:
-            'Ja, med familieabonnementet: nye abonnenter får første måned gratis. Sier du opp før prøveperioden er over, betaler du ingenting.',
+            'Ja: nye abonnenter får første måned gratis, uansett abonnement. Sier du opp før prøveperioden er over, betaler du ingenting.',
         },
         {
           label: 'Hvordan sier jeg opp?',
@@ -147,7 +144,7 @@ export const messages = {
     },
     cta: {
       title: 'Klar for neste stevne?',
-      text: 'Last ned Svøm! Familieabonnementet har første måned gratis.',
+      text: 'Last ned Svøm! Første måned er gratis.',
     },
     footer: { support: 'Support', terms: 'Vilkår for bruk', privacy: 'Personvern' },
   },
@@ -160,14 +157,13 @@ export const messages = {
     },
     nav: { features: 'Features', gallery: 'Screenshots', pricing: 'Pricing', faq: 'FAQ' },
     language: 'Language',
-    lightbox: { prev: 'Previous', next: 'Next', close: 'Close' },
     appStore: { small: 'Download on the', big: 'App Store' },
     hero: {
       eyebrow: 'Live from the pool deck',
       title1: 'Every race.',
       title2: 'Every second.',
       lead: 'Svøm! brings live times, heats, results and stats from the swim meets together – in one fast app for swimmers, parents and coaches.',
-      trial: 'Family: first month free',
+      trial: 'First month free',
       platforms: 'For iPhone and iPad',
     },
     heroCard: { event: 'Event 7. 100m free, men', heat: 'Heat 1 / 2', pr: 'New PB', restart: 'Restart the race' },
@@ -257,9 +253,7 @@ export const messages = {
         'Alerts before the start and when results are in',
       ],
       cta: 'Start free trial',
-      ctaSingle: 'Subscribe',
       trial: 'First month free for new subscribers',
-      noTrial: 'Cancel any time in the App Store',
       note: 'Prices in Norwegian kroner – the App Store shows the price in your currency. The subscription renews automatically and can be cancelled any time in the App Store.',
     },
     faq: {
@@ -284,7 +278,7 @@ export const messages = {
         {
           label: 'Can I try it before I pay?',
           content:
-            'Yes, with the family plan: new subscribers get the first month free. Cancel before the trial ends and you pay nothing.',
+            'Yes: new subscribers get the first month free, on every plan. Cancel before the trial ends and you pay nothing.',
         },
         {
           label: 'How do I cancel?',
@@ -295,7 +289,7 @@ export const messages = {
     },
     cta: {
       title: 'Ready for the next meet?',
-      text: 'Download Svøm! The family plan comes with the first month free.',
+      text: 'Download Svøm! The first month is free.',
     },
     footer: { support: 'Support', terms: 'Terms of Use', privacy: 'Privacy Policy' },
   },
@@ -308,14 +302,13 @@ export const messages = {
     },
     nav: { features: 'Funktionen', gallery: 'Screenshots', pricing: 'Preise', faq: 'Fragen' },
     language: 'Sprache',
-    lightbox: { prev: 'Zurück', next: 'Weiter', close: 'Schließen' },
     appStore: { small: 'Laden im', big: 'App Store' },
     hero: {
       eyebrow: 'Live vom Beckenrand',
       title1: 'Jedes Rennen.',
       title2: 'Jede Sekunde.',
       lead: 'Svøm! bündelt Live-Zeiten, Läufe, Ergebnisse und Statistiken von den Schwimmwettkämpfen – in einer schnellen App für Schwimmer, Eltern und Trainer.',
-      trial: 'Familie: erster Monat gratis',
+      trial: 'Erster Monat gratis',
       platforms: 'Für iPhone und iPad',
     },
     heroCard: { event: 'Wettkampf 7. 100m Freistil, Herren', heat: 'Lauf 1 / 2', pr: 'Neue Bestzeit', restart: 'Rennen neu starten' },
@@ -405,9 +398,7 @@ export const messages = {
         'Hinweise vor dem Start und sobald Ergebnisse da sind',
       ],
       cta: 'Gratis testen',
-      ctaSingle: 'Abonnieren',
       trial: 'Erster Monat gratis für neue Abonnenten',
-      noTrial: 'Jederzeit im App Store kündbar',
       note: 'Preise in norwegischen Kronen – der App Store zeigt den Preis in deiner Währung. Das Abo verlängert sich automatisch und ist jederzeit im App Store kündbar.',
     },
     faq: {
@@ -432,7 +423,7 @@ export const messages = {
         {
           label: 'Kann ich vor dem Bezahlen testen?',
           content:
-            'Ja, mit dem Familienabo: Neue Abonnenten bekommen den ersten Monat gratis. Kündigst du vor dem Ende des Testzeitraums, zahlst du nichts.',
+            'Ja: Neue Abonnenten bekommen bei jedem Abo den ersten Monat gratis. Kündigst du vor dem Ende des Testzeitraums, zahlst du nichts.',
         },
         {
           label: 'Wie kündige ich?',
@@ -443,7 +434,7 @@ export const messages = {
     },
     cta: {
       title: 'Bereit für den nächsten Wettkampf?',
-      text: 'Lade Svøm! Das Familienabo hat den ersten Monat gratis.',
+      text: 'Lade Svøm! Der erste Monat ist gratis.',
     },
     footer: { support: 'Support', terms: 'Nutzungsbedingungen', privacy: 'Datenschutz' },
   },
@@ -456,14 +447,13 @@ export const messages = {
     },
     nav: { features: 'Fonctions', gallery: 'Captures', pricing: 'Tarifs', faq: 'Questions' },
     language: 'Langue',
-    lightbox: { prev: 'Précédent', next: 'Suivant', close: 'Fermer' },
     appStore: { small: 'Télécharger dans', big: 'l’App Store' },
     hero: {
       eyebrow: 'En direct du bord du bassin',
       title1: 'Chaque course.',
       title2: 'Chaque seconde.',
       lead: 'Svøm! réunit les temps en direct, les séries, les résultats et les statistiques des compétitions – dans une app rapide pour nageurs, parents et entraîneurs.',
-      trial: 'Famille : premier mois gratuit',
+      trial: 'Premier mois gratuit',
       platforms: 'Pour iPhone et iPad',
     },
     heroCard: { event: 'Épreuve 7. 100m nage libre, hommes', heat: 'Série 1 / 2', pr: 'Nouveau record', restart: 'Relancer la course' },
@@ -553,9 +543,7 @@ export const messages = {
         'Alertes avant le départ et dès que les résultats tombent',
       ],
       cta: 'Commencer l’essai gratuit',
-      ctaSingle: 'S’abonner',
       trial: 'Premier mois gratuit pour les nouveaux abonnés',
-      noTrial: 'Résiliable à tout moment dans l’App Store',
       note: 'Prix en couronnes norvégiennes – l’App Store affiche le prix dans votre devise. L’abonnement se renouvelle automatiquement et peut être résilié à tout moment dans l’App Store.',
     },
     faq: {
@@ -580,7 +568,7 @@ export const messages = {
         {
           label: 'Puis-je essayer avant de payer ?',
           content:
-            'Oui, avec la formule Famille : les nouveaux abonnés ont le premier mois gratuit. Résiliez avant la fin de l’essai et vous ne payez rien.',
+            'Oui : les nouveaux abonnés ont le premier mois gratuit, quelle que soit la formule. Résiliez avant la fin de l’essai et vous ne payez rien.',
         },
         {
           label: 'Comment résilier ?',
@@ -591,7 +579,7 @@ export const messages = {
     },
     cta: {
       title: 'Prêt pour la prochaine compétition ?',
-      text: 'Téléchargez Svøm! La formule Famille offre le premier mois.',
+      text: 'Téléchargez Svøm! Le premier mois est offert.',
     },
     footer: { support: 'Assistance', terms: 'Conditions d’utilisation', privacy: 'Confidentialité' },
   },
@@ -604,14 +592,13 @@ export const messages = {
     },
     nav: { features: 'Funciones', gallery: 'Capturas', pricing: 'Precios', faq: 'Preguntas' },
     language: 'Idioma',
-    lightbox: { prev: 'Anterior', next: 'Siguiente', close: 'Cerrar' },
     appStore: { small: 'Descárgala en el', big: 'App Store' },
     hero: {
       eyebrow: 'En directo desde el borde de la piscina',
       title1: 'Cada carrera.',
       title2: 'Cada segundo.',
       lead: 'Svøm! reúne tiempos en directo, series, resultados y estadísticas de las competiciones, en una app rápida para nadadores, padres y entrenadores.',
-      trial: 'Familiar: primer mes gratis',
+      trial: 'Primer mes gratis',
       platforms: 'Para iPhone y iPad',
     },
     heroCard: { event: 'Prueba 7. 100m libre, hombres', heat: 'Serie 1 / 2', pr: 'Nueva marca', restart: 'Reiniciar la carrera' },
@@ -701,9 +688,7 @@ export const messages = {
         'Avisos antes de la salida y cuando hay resultados',
       ],
       cta: 'Empezar prueba gratuita',
-      ctaSingle: 'Suscribirse',
       trial: 'Primer mes gratis para nuevos suscriptores',
-      noTrial: 'Cancela cuando quieras en el App Store',
       note: 'Precios en coronas noruegas: el App Store muestra el precio en tu moneda. La suscripción se renueva automáticamente y se puede cancelar en cualquier momento en el App Store.',
     },
     faq: {
@@ -728,7 +713,7 @@ export const messages = {
         {
           label: '¿Puedo probarla antes de pagar?',
           content:
-            'Sí, con el plan familiar: los nuevos suscriptores tienen el primer mes gratis. Si cancelas antes de que acabe la prueba, no pagas nada.',
+            'Sí: los nuevos suscriptores tienen el primer mes gratis en todos los planes. Si cancelas antes de que acabe la prueba, no pagas nada.',
         },
         {
           label: '¿Cómo cancelo?',
@@ -739,7 +724,7 @@ export const messages = {
     },
     cta: {
       title: '¿Listo para la próxima competición?',
-      text: 'Descarga Svøm! El plan familiar incluye el primer mes gratis.',
+      text: 'Descarga Svøm! El primer mes es gratis.',
     },
     footer: { support: 'Soporte', terms: 'Términos de uso', privacy: 'Privacidad' },
   },
